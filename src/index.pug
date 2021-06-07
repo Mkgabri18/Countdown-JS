@@ -1,0 +1,29 @@
+.wrap
+  h1 COUNTDOWN
+  #countdown
+    // Days block
+    .block-days
+      span.count-title Days
+      p#d.count-digit 00
+
+    // Hours block
+    .block-hours
+      span.count-title Hours
+      p#h.count-digit 00
+
+    // Minutes block
+    .block-min
+      span.count-title Minutes
+      p#m.count-digit 00
+
+    //Seconds block
+    .block-sec
+      span.count-title Seconds
+      p#s.count-digit 00
+
+  hr
+
+  .group-input
+    label.date-label(for="start") Start date:
+    input.date-input(type="date", min="2018-01-01", max="2022-12-31")
+    button.date-submit(value="Inicia", onClick="sendDate()") Inicio

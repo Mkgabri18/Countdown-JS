@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrap {
+  text-align: center;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.count-digit {
+  font-size: 3em;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+hr {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 10%;
+}
+
+.group-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  margin: auto;
+}
+.group-input > * {
+  margin-bottom: 1em;
+}
