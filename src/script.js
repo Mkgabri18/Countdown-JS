@@ -1,12 +1,6 @@
 //base element
 const clock = document.getElementById("countdown");
 
-//get timing block
-const dayBlock = document.querySelector("block-days");
-const hourBlock = document.querySelector("block-hours");
-const minuteBlock = document.querySelector("block-min");
-const secondBlock = document.querySelector("block-sec");
-
 //consts
 const second = 1000 * 60;
 const minute = second * 60;
@@ -18,13 +12,16 @@ let selectDate = dateBlock.value;
 let x;
 
 function sendDate() {
+  if (dateBlock.value === "") {
+    return;
+  }
   // Data selezionata
   selectDate = new Date(dateBlock.value);
   selectDate.setHours(0);
   selectDate.setMinutes(0);
   selectDate.setSeconds(0);
   //Devo resettare il timer precedente
-  clearTimeout(x);
+  clearInterval(x);
   //Richiamo funzione countdown ogni secondo
   x = setInterval(CountDown, 1000, selectDate);
 }
